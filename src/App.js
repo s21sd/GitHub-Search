@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Header from './Header';
+import FirstMain from './FirstMain';
+import SecondMain from './SecondMain';
+import Apicall from './Apicall';
+// Add the solid icons to the library
+library.add(fas);
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className='first-new-app'>
+        <FirstMain />
+      </div>
+      <div className='second-new-app'>
+        <SecondMain />
+
+      </div>
+      <Apicall />
     </div>
   );
 }
-
-export default App;
